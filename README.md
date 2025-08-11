@@ -81,7 +81,13 @@ Models built include:
 - Trigram
 - N-Gram (1-5 words)
 
-## Model Performance Comparison
+## Model Performance Metrics
+- A classification report is generated for each model, showing model performance metrics such as Precision, Recall, Accuracy, and F1-Score.
+- A confusion matrix is generated for each model to show how its predictions compare to the actual sentiment labels.
+- SHAP values are computed and visualized to highlight which words or phrases most influence the model’s predictions.
+- The confusion matrices and SHAP plots can be found in the Jupyter Notebook.
+
+### Metrics
 | Model     | Sentiment | Precision | Recall | F1-Score |
 |-----------|-----------|-----------|--------|----------|
 | Unigram   | Negative  | 0.62      | 0.65   | 0.64     |
@@ -97,21 +103,27 @@ Models built include:
 |           | Neutral   | 0.89      | 0.95   | 0.92     |
 |           | Positive  | 0.76      | 0.64   | 0.70     |
 
+- The Unigram and the N-Gram models have the strongest performance, with minimal variation between them.
+- Performance declines when the model is trained on longer phrases like bigrams and trigrams.
 
 ---
 
+### Accuracy and Macro-Average Metrics
 | Model   | Precision | Recall | F1-Score | Accuracy |
 |---------|-----------|--------|----------|----------|
 | Unigram | 0.77      | 0.74   | 0.75     | 0.83     |
 | Bigram  | 0.71      | 0.67   | 0.68     | 0.79     |
 | Trigram | 0.69      | 0.51   | 0.53     | 0.71     |
 | N-Gram  | 0.76      | 0.74   | 0.75     | 0.83     |
-
 > Note: This table uses macro-averages for precision, recall, and f1-score.
-> 
+
+- Results from the previous table are reflected here; the accuracy scores are the same for the Unigram and N-Gram models and macro-averages for precision, recall, and f1-score are about the same.
+- The performance decline from unigram to bigram is lower than the decline from bigram to trigram.
+
 # Insights
 - In this dataset, unigrams contributed the most to best performing models.
 - Allowing the model to check for N-grams, including but not limited to the unigrams, does not affect model performance much for Negative and Neutral sentiment, but does have an observable increase in recall for Positive sentiment.
+- Overall model performance declines when the model is trained on longer phrases, with each additional term driving larger performance drops. 
 - The N-gram model retains the same level of performance for negative and neutral sentiment in the unigram baseline, while providing a slight boost in Positive recall and clearer SHAP interpretability at the expense of Positive precision.
 - The data may contain noise that makes the model biased towards Neutral sentiment. Temporal anchors are suspected to be responsible.
 
