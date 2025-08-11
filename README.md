@@ -23,12 +23,15 @@ For more technical information and to view the code, please refer to the Jupyter
 
 # Exploratory Data Analysis
 ## Sentiment Distribution
+<img width="1000" height="600" alt="sentiment_distribution" src="https://github.com/user-attachments/assets/e7120ebf-8131-44f5-aa89-71141bc13688" />
 
 - It looks like most over half of the sentiment in the data is labeled as neutral. 
 - Positive sentiment is around double the negative sentiment. 
 - The data is imbalanced and sentiment prediction models are suceptible to biases toward neutral sentiment.
+---
 
 ## Raw Word Count Distribution
+<img width="1000" height="600" alt="word_count_dist_uncleaned" src="https://github.com/user-attachments/assets/3ae837f3-df4f-4625-9a60-34126910e26b" />
 
 - Word count is slightly higher when sentiment is positive vs negative, but the difference is small.
 - When sentiment is neutral, word count tends to be the lowest.
@@ -36,8 +39,10 @@ For more technical information and to view the code, please refer to the Jupyter
 - Positive sentiment seems to have a larger box than negative sentiment, indicating larger spread in word count.
 - In the context of the data, financial news tends to have longer sentences when sentiment has a clear direction.
 - For all sentiment classes, the data seems to be skewed towards higher word counts since the line representing the median is below the center of each box.
+---
 
 ## Cleaned Word Count Distribution
+<img width="1000" height="600" alt="word_count_dist_cleaned" src="https://github.com/user-attachments/assets/4629f6ff-6c1e-4051-96c0-67b1f61822c5" />
 
 - After cleaning the text and removing stopwords, the boxes for each sentiment are now lower. 
 - The previous pattern of positive > negative > neutral in word count is observed again.
@@ -49,13 +54,17 @@ For more technical information and to view the code, please refer to the Jupyter
 Multiple Word Clouds were generated based on N-Gram, representing word count within phrases. Unigrams contain only a single word, while Bigrams are phrases containing 2 words.
 
 ### Unigram Word Cloud
+<img width="1000" height="600" alt="unigram_wordcloud" src="https://github.com/user-attachments/assets/a8db9292-cc33-4277-a238-bd5afe19d2ac" />
 
 - Financial currencies and business terms appear frequently.
 - The data seems to be dominantly based around European companies and/or news since euro appears most frequently, although usd has also appeared in the wordcloud.
 - From the size of the words, the news mentions sales, profits, and million most frequently.
 - However, with single words it can be difficult to identify sentiment. Words like 'increase' or 'fell' could be used describe to either profits or losses.
 
-## Bigram Word Cloud
+---
+
+### Bigram Word Cloud
+<img width="1000" height="600" alt="bigram_wordcloud" src="https://github.com/user-attachments/assets/b869fb5c-a95d-4270-b433-69c2343a56cf" />
 
 - With Bigrams, the word cloud contains 2 word phrases instead.
 - The biggest change in this word cloud are the temporal anchors and directional signals such as more specific time periods and whether profit increased or decreased.
@@ -72,9 +81,34 @@ Models built include:
 - Trigram
 - N-Gram (1-5 words)
 
-## Model Comparison
+## Model Performance Comparison
+| Model     | Sentiment | Precision | Recall | F1-Score |
+|-----------|-----------|-----------|--------|----------|
+| Unigram   | Negative  | 0.62      | 0.65   | 0.64     |
+|           | Neutral   | 0.88      | 0.96   | 0.92     |
+|           | Positive  | 0.81      | 0.61   | 0.70     |
+| Bigram    | Negative  | 0.57      | 0.48   | 0.52     |
+|           | Neutral   | 0.85      | 0.96   | 0.90     |
+|           | Positive  | 0.73      | 0.56   | 0.63     |
+| Trigram   | Negative  | 0.53      | 0.23   | 0.32     |
+|           | Neutral   | 0.71      | 1.00   | 0.83     |
+|           | Positive  | 0.83      | 0.29   | 0.43     |
+| N-Gram    | Negative  | 0.63      | 0.63   | 0.63     |
+|           | Neutral   | 0.89      | 0.95   | 0.92     |
+|           | Positive  | 0.76      | 0.64   | 0.70     |
 
 
+---
+
+| Model   | Precision | Recall | F1-Score | Accuracy |
+|---------|-----------|--------|----------|----------|
+| Unigram | 0.77      | 0.74   | 0.75     | 0.83     |
+| Bigram  | 0.71      | 0.67   | 0.68     | 0.79     |
+| Trigram | 0.69      | 0.51   | 0.53     | 0.71     |
+| N-Gram  | 0.76      | 0.74   | 0.75     | 0.83     |
+
+> Note: This table uses macro-averages for precision, recall, and f1-score.
+> 
 # Insights
 - In this dataset, unigrams contributed the most to best performing models.
 - Allowing the model to check for N-grams, including but not limited to the unigrams, does not affect model performance much for Negative and Neutral sentiment, but does have an observable increase in recall for Positive sentiment.
