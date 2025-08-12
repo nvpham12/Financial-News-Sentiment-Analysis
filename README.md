@@ -1,7 +1,14 @@
 # Project Overview
 This project focuses on predicting sentiment in text from financial news using natural language processing (NLP) and logistic regression. The workflow includes cleaning and preprocessing text data, visualizing sentiment distribution and word count trends, and analyzing word usage across unigrams, bigrams, and n-grams using word clouds. TF-IDF–based logistic regression models are trained to classify sentiment, with performance evaluated through confusion matrices, classification report heatmaps, and SHAP plots to visualize influential words and phrases.
 
-For more technical information and to view the code, please refer to the Jupyter Notebook file.
+For more technical information and to view the code, please refer to the Jupyter Notebook.
+
+# Tools and Technologies
+- **Pandas**: data manipulation and cleaning
+- **Matplotlib / Seaborn / Wordcloud**: EDA and visualizations
+- **Scikit-learn**: data preprocessing and machine learning modeling
+- **NLTK**: text specific data cleaning
+- **SHAP**: computing Shapley values and determining feature importance
 
 # Data Source and License
 - Dataset: Financial Phrasebank
@@ -45,8 +52,8 @@ For more technical information and to view the code, please refer to the Jupyter
 <img width="1000" height="600" alt="word_count_dist_cleaned" src="https://github.com/user-attachments/assets/4629f6ff-6c1e-4051-96c0-67b1f61822c5" />
 
 - After cleaning the text and removing stopwords, the boxes for each sentiment are now lower. 
-- The previous pattern of positive > negative > neutral in word count is observed again.
-- Skew seems to become more obvious for positive and negative sentiment (the median line is closer to the bottom of the box).
+- The previous pattern of positive > negative > neutral sentiment in word count is observed again.
+- Skew is more obvious for positive and negative sentiment (the median line is closer to the bottom of the box).
 - For neutral sentiment, the median line approaches the middle of the box indicating reduced skew.
 - The box for positive sentiment appears larger indicating wider spread in word count.
 
