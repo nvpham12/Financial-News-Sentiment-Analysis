@@ -64,7 +64,7 @@ Multiple Word Clouds were generated based on N-Gram, representing word count wit
 <img width="1000" height="600" alt="unigram_wordcloud" src="https://github.com/user-attachments/assets/a8db9292-cc33-4277-a238-bd5afe19d2ac" />
 
 - Financial currencies and business terms appear frequently.
-- The data seems to be dominantly based around European companies and/or news since euro appears most frequently, although usd has also appeared in the wordcloud.
+- The data seems to be dominantly based around European companies or news since euro appears most frequently as a currency.
 - From the size of the words, the news mentions sales, profits, and million most frequently.
 - However, with single words it can be difficult to identify sentiment. Words like 'increase' or 'fell' could be used describe to either profits or losses.
 
@@ -88,13 +88,13 @@ Models built include:
 - Trigram
 - N-Gram (1-5 words)
 
-## Model Performance Metrics
+# Model Performance Metrics
 - A classification report is generated for each model, showing model performance metrics such as Precision, Recall, Accuracy, and F1-Score.
 - A confusion matrix is generated for each model to show how its predictions compare to the actual sentiment labels.
 - SHAP values are computed and visualized to highlight which words or phrases most influence the model’s predictions.
 - The confusion matrices and SHAP plots can be found in the Jupyter Notebook.
 
-### Metrics
+## Metrics Table
 | Model     | Sentiment | Precision | Recall | F1-Score |
 |-----------|-----------|-----------|--------|----------|
 | Unigram   | Negative  | 0.62      | 0.65   | 0.64     |
@@ -115,7 +115,7 @@ Models built include:
 
 ---
 
-### Accuracy and Macro-Average Metrics
+## Accuracy and Macro-Average Metrics Table
 | Model   | Precision | Recall | F1-Score | Accuracy |
 |---------|-----------|--------|----------|----------|
 | Unigram | 0.77      | 0.74   | 0.75     | 0.83     |
