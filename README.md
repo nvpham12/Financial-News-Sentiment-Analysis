@@ -13,7 +13,7 @@ Process text data and predict sentiment (positive, neutral, negative) in financi
 - Found dataset bias toward neutral sentiment and influence of temporal terms.
 
 ## Links
-- [Project Jupyter Notebook](https://github.com/nvpham12/Telecom-Customer-Churn-Prediction/blob/main/Telecom_Customer_Churn_Prediction.ipynb)
+- [Project Jupyter Notebook](https://github.com/nvpham12/Financial-Phrasebank-Sentiment-Analysis/blob/main/Financial%20Phrasebank%20Sentiment%20Analysis.ipynb)
 - [Full Technical Report](https://github.com/nvpham12/Financial-News-Sentiment-Analysis/blob/main/Technical%20Report%20Financial%20Phrasebank%20Sentiment.md)
 
 ## Data Source and License
