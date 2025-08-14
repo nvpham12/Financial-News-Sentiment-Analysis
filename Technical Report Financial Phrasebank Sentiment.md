@@ -1,7 +1,7 @@
 # Project Overview
 This project focuses on predicting sentiment in text from financial news using natural language processing (NLP) and logistic regression. The workflow includes cleaning and preprocessing text data, visualizing sentiment distribution and word count trends, and analyzing word usage across unigrams, bigrams, and n-grams using word clouds. TF-IDF–based logistic regression models are trained to classify sentiment, with performance evaluated through confusion matrices, classification report heatmaps, and SHAP plots to visualize influential words and phrases.
 
-To view the code, please refer to the [Jupyter Notebook.](https://github.com/nvpham12/Financial-Phrasebank-Sentiment-Analysis/blob/main/Financial%20Phrasebank%20Sentiment%20Analysis.ipynb)
+To view the code and more technical details, please refer to the [Jupyter Notebook.](https://github.com/nvpham12/Financial-Phrasebank-Sentiment-Analysis/blob/main/Financial%20Phrasebank%20Sentiment%20Analysis.ipynb)
 
 # Tools and Technologies
 - **Pandas**: data manipulation and cleaning
