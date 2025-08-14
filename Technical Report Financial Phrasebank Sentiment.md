@@ -1,7 +1,7 @@
 # Project Overview
 This project focuses on predicting sentiment in text from financial news using natural language processing (NLP) and logistic regression. The workflow includes cleaning and preprocessing text data, visualizing sentiment distribution and word count trends, and analyzing word usage across unigrams, bigrams, and n-grams using word clouds. TF-IDF–based logistic regression models are trained to classify sentiment, with performance evaluated through confusion matrices, classification report heatmaps, and SHAP plots to visualize influential words and phrases.
 
-For more technical information and to view the code, please refer to the Jupyter Notebook.
+To view the code, please refer to the [Jupyter Notebook.](https://github.com/nvpham12/Financial-Phrasebank-Sentiment-Analysis/blob/main/Financial%20Phrasebank%20Sentiment%20Analysis.ipynb)
 
 # Tools and Technologies
 - **Pandas**: data manipulation and cleaning
@@ -94,7 +94,7 @@ Models built include:
 - SHAP values are computed and visualized to highlight which words or phrases most influence the model’s predictions.
 - The confusion matrices and SHAP plots can be found in the Jupyter Notebook.
 
-## Metrics Table
+## Model Metrics Table
 | Model     | Sentiment | Precision | Recall | F1-Score |
 |-----------|-----------|-----------|--------|----------|
 | Unigram   | Negative  | 0.62      | 0.65   | 0.64     |
@@ -131,7 +131,7 @@ Models built include:
 - In this dataset, unigrams contributed the most to best performing models.
 - Allowing the model to check for N-grams, including but not limited to the unigrams, does not affect model performance much for Negative and Neutral sentiment, but does have an observable increase in recall for Positive sentiment.
 - Overall model performance declines when the model is trained on longer phrases, with each additional term driving larger performance drops. 
-- The N-gram model retains the same level of performance for negative and neutral sentiment in the unigram baseline, while providing a slight boost in Positive recall and clearer SHAP interpretability at the expense of Positive precision.
+- The N-gram model retains roughly the same level of performance for negative and neutral sentiment in the unigram baseline, while providing a slight boost in Positive recall and clearer SHAP interpretability at the expense of Positive precision.
 - The data may contain noise that makes the model biased towards Neutral sentiment. Temporal anchors are suspected to be responsible.
 
 # Next Steps
