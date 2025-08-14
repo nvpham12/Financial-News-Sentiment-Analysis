@@ -14,7 +14,7 @@ Process text data and predict sentiment (positive, neutral, negative) in financi
 
 ## Links
 - [Project Jupyter Notebook](https://github.com/nvpham12/Financial-Phrasebank-Sentiment-Analysis/blob/main/Financial%20Phrasebank%20Sentiment%20Analysis.ipynb)
-- [Full Technical Report](https://github.com/nvpham12/Financial-News-Sentiment-Analysis/blob/main/Technical%20Report%20Financial%20Phrasebank%20Sentiment.md)
+- [Technical Report](https://github.com/nvpham12/Financial-News-Sentiment-Analysis/blob/main/Technical%20Report%20Financial%20Phrasebank%20Sentiment.md)
 
 ## Data Source and License
 - Dataset: Financial Phrasebank
